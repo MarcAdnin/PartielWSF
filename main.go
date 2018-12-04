@@ -24,7 +24,6 @@ func main() {
 		Handler: myHandler,
 	}
 
-	fmt.Println("Test")
 	fmt.Println("Server is running at", port)
 
 	log.Fatal(server.ListenAndServe())
