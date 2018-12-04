@@ -14,7 +14,7 @@ func TestNotFound(t *testing.T) {
 
 	handler.ServeHTTP(res, req)
 
-	if res.Code == 404 {
+	if res.Code != 404 {
 		t.Fatalf("Wrong status code returned: %d", res.Code)
 	}
 }

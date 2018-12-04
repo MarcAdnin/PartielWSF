@@ -1,12 +1,15 @@
 
 start:
-  go run
+	go run ./main.go
 
 test:
-  cd handler && go test && cd ..
+	cd handler
+	go test
+	cd ..
 
-build: #test
-  go build
+build:
+	go test
+	go build
 
 infra:
-  terraform apply
+	terraform apply
